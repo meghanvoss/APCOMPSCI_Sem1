@@ -21,6 +21,6 @@ public class Lesson_03
 		
 		String teacher = keyboard.next();
 		
-		System.out.println("Okay!" + teacher + " is very good");
+		System.out.println("Okay! " + teacher + " is very good");
 	}
 }

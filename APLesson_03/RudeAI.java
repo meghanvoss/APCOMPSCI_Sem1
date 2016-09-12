@@ -21,10 +21,10 @@ public class RudeAI
 		System.out.println("How old are you, " + name + "?");
 		
 		//search for the next integer that the user enters
-		int num = keyboard.nextInt();
+		int age = keyboard.nextInt();
 		
 		//print the results...
-		System.out.println("Oof, " + num + " is getting old. The clock is really ticking.");
+		System.out.println("Oof, " + age + " is getting old. The clock is really ticking.");
 		
 		//prompt for user input
 		System.out.println("What do you do for fun, " + name + "?");
@@ -43,13 +43,22 @@ public class RudeAI
 		System.out.println("Yikes, " + music + "is so bad. If you want to listen to some REAL music you should follow me on soundcloud.");
 		
 		//prompt for user input
-		System.out.println("How many sibling do you have?");
+		System.out.println("How many siblings do you have?");
 		
 		//search for the next integer that the user enters
 		int num = keyboard.nextInt();
 		
 		//print the results...
-		System.out.println("")
+		System.out.println("So you have " + num + "? I would feel bad for anyone else that is forced to live with you.");
+		
+		//prompt for user input
+		System.out.println("What do you want to be when you grow up?");
+		
+		String job = keyboard.next();
+		
+		//print the results...
+		System.out.println("I doubt anybody would want to hire someone as dumb as you for a " + job + ". So " + name + ", you're " + age +  ", you like to " + fun + " and you listen to " + music + "... uhhh can you say lame? Nah, I'm just kidding, " + name + ", good luck with becoming a " + job + "!");
+		
 		
 	}
 }

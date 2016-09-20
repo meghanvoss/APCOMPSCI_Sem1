@@ -5,6 +5,9 @@ public class receipt
 	
 	public static void main(String[]args)
 	{
+		//new receipt object
+		receipt form = new receipt();
+		
 		//instantiate the new Scanner object "keyboard"
 		Scanner kb = new Scanner(System.in);
 		
@@ -40,11 +43,26 @@ public class receipt
 		//search for next double that the user enters
 		double price3 = kb.nextDouble();
 		
-		form.format(item1, price1, item2, price2, item3, price3);
+		System.out.println("<<<<<<<<<<<<<<<__Receipt__>>>>>>>>>>>>>>>>");
+		form.format(item1, price1);
+		form.format(item2, price2);
+		form.format(item3, price3);
+		
+		double Subtotal = price1 + price2 + price3;
+		form.format("Subtotal: ", Subtotal);
+		
+		double Tax = .08 * Subtotal;
+		form.format("Tax: ", Tax);
+		
+		double Total = Subtotal + Tax;
+		form.format("Total: ", Total);
+		
+		System.out.println("* Thank you for your support *");
+		
 	}
 	
-	public void format(String item1, double price1, String item2, double price2, String item3, double price3)
+	public void format(String item, double price)
 	{
-		System.out.printf("<<<<<<<<<<<<<<<__Receipt__>>>>>>>>>>>>>>>>");
+		System.out.printf("\n%10s %10.2f", item, price);
 	}
 }

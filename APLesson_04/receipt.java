@@ -57,12 +57,12 @@ public class receipt
 		double Total = Subtotal + Tax;
 		form.format("Total: ", Total);
 		
-		System.out.println("* Thank you for your support *");
+		System.out.println("\n* Thank you for your support *");
 		
 	}
 	
 	public void format(String item, double price)
 	{
-		System.out.printf("\n%10s %10.2f", item, price);
+		System.out.printf("\n*%20s %10.2f", item, price);
 	}
 }

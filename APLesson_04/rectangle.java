@@ -2,9 +2,9 @@ import java.util.Scanner; //import Statement
 
 public class rectangle
 {
-	static double = length;
-	static double = width;
-	static double = perimeter;
+	static double l;
+	static double w;
+	static double perimeter;
 	
 	
 	public static void main(String[]args)
@@ -18,22 +18,24 @@ public class rectangle
 		System.out.println("Please enter the length in inches:");
 		
 		//search for next double that the user enters
-		double length = kb.nextDouble();
+		l = kb.nextDouble();
 		
 		System.out.println("Please enter the width in inches:");
 		
 		//search for the next double that the user enters
-		double width = kb.nextDouble();
+		w = kb.nextDouble();
 		
-		double formula = perimeter.calc(l, w);
-		
-		double perimeter = (2*length) + (2*width);
-		
-		System.out.printf("Your rectangle is %10.2f\n sq ft around", formula);
+		calcPerim();
+		print();
 	}
 	
-	public double calc(double length, double width, double perimeter)
+	public static void calcPerim()
 	{
-		return ((2*length) + (2*width));
+		perimeter = ((2*l) + (2*w));
+	}
+	
+	public static void print()
+	{
+		System.out.printf("Your rectangle is %1.5f sq ft around.\n", perimeter );
 	}
 }

@@ -1,10 +1,7 @@
 import java.util.Scanner; //import Statement
 
-public class cube
+public class cubereturn
 {
-	static double side;
-	static double sa;
-	
 	
 	public static void main(String[]args)
 	{
@@ -17,19 +14,18 @@ public class cube
 		System.out.println("Please enter the length of the side:");
 		
 		//search for next double that the user enters
-		side = kb.nextDouble();
+		double side = kb.nextDouble();
 		
-		calcSA();
-		print();
+		print("The surface area of a cube with side of length " + side + " is ", calcSA(side));
 	}
 	
-	public static void calcSA()
+	public static double calcSA(double side)
 	{
-		sa = 6*Math.pow(side,2);
+		return 6*Math.pow(side,2);
 	}
 	
-	public static void print()
+	public static void print(String text, double sa)
 	{
-		System.out.printf("The surface area of a cube with side of length %4.2f is %3.5f.\n", side, sa );
+		System.out.println(text + sa );
 	}
 }

@@ -1,6 +1,8 @@
 import java.util.Scanner;
 public class discountreceipt
 {
+	static double discountamount = 0;
+	
 	public static void main(String[]args)
 	{
 		//new receipt object
@@ -65,24 +67,37 @@ public class discountreceipt
 		double Tax = .08 * Subtotal;
 		form.format("Tax: ", Tax);
 		
-		double Total = Subtotal - Discount + Tax;
+		discount(Subtotal);
+		form.format("Discount: ", discountamount);
+		
+		double Total = Subtotal - discountamount + Tax;
 		form.format("Total: ", Total);
 		
-		System.out.println("\n* Thank you for your support *");
+		System.out.println(" __________________________________");
+		
+		System.out.println("* Thank you for your support *");
 	}
 	
-	public void format(String item, double price)
-	{
-		System.out.printf("\n*%20s %10.2f", item, price);
-	}
 	
-	public void Discount(double Total)
+	public static void discount(double Subtotal)
 	{
-		boolean discount = Total >= 2000;
+		boolean discount = Subtotal >= 2000;
 		
 		if(discount)
-			Discount = .15 * Subtotal;
+		{
+			discountamount = .15 * Subtotal;
+		}
+
 		if(!discount)
-			Discount = 0;
+		{
+			discountamount = 0;
+		}
+
 	}
+	
+	public static void format(String item, double price)
+	{
+		System.out.printf("*%20s %-10.2f*\n", item, price);
+	}
+	
 }

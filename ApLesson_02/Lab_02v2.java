@@ -1,4 +1,4 @@
-public class Lab_02
+public class Lab_02v2
 {
 	public static void main(String[]args)
 	{

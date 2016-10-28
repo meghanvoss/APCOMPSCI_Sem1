@@ -37,6 +37,6 @@ public class compound_interest
 	
 	public double interest(double rate, double principal, double timescompounded, double life)
 	{
-		return (principal*Math.pow(1+rate/timescompounded, timescompounded*life));
+		return ((principal*Math.pow(1+rate/timescompounded, timescompounded*life))/(12*life));
 	}
 }

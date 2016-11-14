@@ -52,6 +52,6 @@ public class IDCard
 	
 	public void card(String firstname, String lastname, String title, String site, int year, String subject)
 	{
-		System.out.printf("%s %13s* \n*%s %9s* \n*%s %13s*", firstname, lastname, title, site, year, subject);
+		System.out.printf("*%s %13s* \n*%s %9s* \n*%s %13s*", firstname, lastname, title, site, year, subject);
 	}
 }	

@@ -1,6 +1,6 @@
 import java.util.Scanner; //import Statement
 
-public class ReverseWord
+public class FirstLetter
 {
 	public static void main(String[]args)
 	{
@@ -14,20 +14,18 @@ public class ReverseWord
 			words[i] = kb.next();
 		}
 		
-			System.out.println("In order...");
 			for (String word : words)
 			{
-				System.out.print(word + " ");
+				System.out.print("");
 			}
-			System.out.println("\nReversed...");
-			reverse(words);
+			first(words);
 	}
 	
-	public static void reverse(String[] words)
+	public static void first(String[] words)
 	{
-		for(int i = words.length - 1; i>=0; i--)
+		for(int i = 0; i<=4; i++)
 		{
-			System.out.print(words[i] + " ");
+			System.out.print(words[i].substring(0,1) + " ");
 		}
 	}
 }

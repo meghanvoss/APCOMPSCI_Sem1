@@ -15,16 +15,17 @@ public class AverageNumbers
 			{
 				System.out.print(num + " ");
 			}
-			System.out.println("\nThe average of the above numbers is..." + average(numbers));
+		System.out.println("\nThe average of the above numbers is..." + average(numbers));
 	}
 	
-	public static void average(int[] numbers)
+	public static int average(int[] numbers)
 	{
 		int average = 0;
 		
-		for(int i = 0; i<=9; i++)
+		for(int num : numbers)
 		{
-			int sum += num;
+			average += num;
 		}
+		return average/10;
 	}
 }

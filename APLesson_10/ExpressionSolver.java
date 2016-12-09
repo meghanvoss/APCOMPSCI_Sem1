@@ -11,37 +11,45 @@ public class ExpressionSolver
 		String expression = kb.nextLine();
 		
 		ArrayList<String>equation = new ArrayList<>(Arrays.asList(expression.split(" ")));
-		
-		int i = 0;
-		while(i < equation.size())
-		{
-			if(i < equation.size() && equation.get(i).equals("+"))
+		System.out.println(doEquation());
+	}
+		public static String doEquation()
+		{int i = 0;
+			while(i < equation.size())
 			{
-				equation.set(i, "" + (Integer.parseInt(equation.get(i-1)) + Integer.parseInt(equation.get(i+1))));
-				equation.remove(i-1);
-				equation.remove(i);
-			}
-			else
-				if(i < equation.size() && equation.get(i).equals("-"))
+				if(i < equation.size() && equation.get(i).equals("+"))
 				{
 					equation.set(i, "" + (Integer.parseInt(equation.get(i-1)) + Integer.parseInt(equation.get(i+1))));
-					equation.remove(i+1);
+					equation.remove(i-1);
 					equation.remove(i);
 				}
-				else
-				{
-					if
+				else if(i < equation.size() && equation.get(i).equals("-"))
 					{
-						
+						equation.set(i, "" + (Integer.parseInt(equation.get(i-1)) - Integer.parseInt(equation.get(i+1))));
+						equation.remove(i-1);
+						equation.remove(i);
+					}
+				else if(i < equation.size() && equation.get(i).equals("*"))
+					{
+						equation.set(i, "" + (Integer.parseInt(equation.get(i*1)) * Integer.parseInt(equation.get(i/1))));
+						equation.remove(i-1);
+						equation.remove(i);
 					}
 					
-					else
+				else if(i < equation.size() && equation.get(i).equals("/"))
 					{
-					i++;
+						equation.set(i, "" + (Integer.parseInt(equation.get(i*1)) / Integer.parseInt(equation.get(i/1))));
+						equation.remove(i-1);
+						equation.remove(i);
 					}
-				}
+					
+	
+				i++;
+						
+					
+				
+			}
 		}
-		
-		System.out.println(equation);
+		return equation; 
 	}
 }

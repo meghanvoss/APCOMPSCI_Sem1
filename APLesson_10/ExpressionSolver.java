@@ -13,7 +13,7 @@ public class ExpressionSolver
 		ArrayList<String>equation = new ArrayList<>(Arrays.asList(expression.split(" ")));
 		System.out.println(doEquation());
 	}
-		public static String doEquation()
+		public static String doEquation(equation)
 		{int i = 0;
 			while(i < equation.size())
 			{

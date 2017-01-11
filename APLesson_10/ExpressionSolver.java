@@ -11,7 +11,8 @@ public class ExpressionSolver
 		String expression = kb.nextLine();
 		
 		ArrayList<String>equation = new ArrayList<>(Arrays.asList(expression.split(" ")));
-		System.out.println(doEquation());
+		doEquation(equation);
+		System.out.println(equation);
 	}
 		public static void doEquation(ArrayList<String> equation)
 		{int i = 0;
@@ -50,6 +51,6 @@ public class ExpressionSolver
 				
 			}
 		}
-		return equation; 
-	}
+		
+	
 }

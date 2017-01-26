@@ -1,4 +1,4 @@
-public class GetOdds
+public class BiggestNumber
 {
 	static int[] numbers = new int[10];
 	public static void main(String[]args)
@@ -23,20 +23,20 @@ public class GetOdds
 		{
 				System.out.print(num + " ");
 		}
-		System.out.println("Here are the odds " + getOdds());
+		System.out.println("The largest number is " + getBiggest());
 	}
 	
-	public static String getOdds()
+	public static int getBiggest()
 	{
-		String odds = " ";
+		int max = 0;
 		
 		for (int num : numbers)
 		{
-			if (((num%2)==1))
+			if(num > max)
 			{
-				odds += num + " ";
+				max = num;
 			}
 		}
-		return odds;
+		return max;
 	}
 }

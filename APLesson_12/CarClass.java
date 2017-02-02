@@ -55,7 +55,7 @@ public class CarClass
 		return engine;
 	}
 	
-	public String getwhee()
+	public String getwheel()
 	{
 		return tires;
 	}

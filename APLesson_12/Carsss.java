@@ -15,7 +15,7 @@ public class Carsss
 		
 		CarClass object1 = new CarClass(thecolor, theinterior, theengine, thewheels);
 		
-		System.out.println("Your vehicle is ready \n Paint: " + object1.getcol() + "\n Interior: " + object1.getinter() + "\n Engine: " + object1.geteng() + "\n Tires: " + object1.getwhee());
+		System.out.println("Your vehicle is ready \n Paint: " + object1.getcolor() + "\n Interior: " + object1.getinterior() + "\n Engine: " + object1.getengine() + "\n Tires: " + object1.getwheel());
 		
 	}
 }

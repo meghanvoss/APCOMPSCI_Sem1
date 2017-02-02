@@ -1,21 +1,50 @@
-import java.util.Scanner;
-public class Carsss
+import static java.lang.Math.*;
+public class Human
 {
-	public static void main(String[]args)
+	private String hair, eyes, skin;
+	
+	public Human()
 	{
-		Scanner kb = new Scanner(System.in);
-		System.out.println("What is the paint color of the car? ");
-		String thecolor = kb.nextLine();
-		System.out.println("What is the interior of the car? ");
-		String theinterior = kb.nextLine();
-		System.out.println("What is the engine of the car? ");
-		String theengine = kb.nextLine();
-		System.out.println("What kind of wheels does the car have? ");
-		String thewheels = kb.nextLine();
-		
-		CarClass object1 = new CarClass(thecolor, theinterior, theengine, thewheels);
-		
-		System.out.println("Your vehicle is ready \n Paint: " + object1.getcol() + "\n Interior: " + object1.getinter() + "\n Engine: " + object1.geteng() + "\n Tires: " + object1.getwhee());
-		
+		hair = "";
+		eyes = "";
+		skin = "";
+	}
+	
+	public Human(String thehair, String theeyes, String theskin)
+	{
+		hair = thehair;
+		eyes = theeyes;
+		skin = theskin;
+	}
+	
+	public void sethair(String thehair)
+	{
+		hair = thehair;
+	}
+	
+	public void seteyes(String theeyes)
+	{
+		eyes = theeyes;
+	}
+	
+	public void setengine(String theskin)
+	{
+		skin = theskin;
+	}
+	
+	
+	public String gethair()
+	{
+		return hair;
+	}
+	
+	public String geteyes()
+	{
+		return eyes;
+	}
+	
+	public String getskin()
+	{
+		return skin;
 	}
 }

@@ -1,21 +1,19 @@
 import java.util.Scanner;
-public class Carsss
+public class HumanDriver
 {
 	public static void main(String[]args)
 	{
 		Scanner kb = new Scanner(System.in);
-		System.out.println("What is the paint color of the car? ");
-		String thecolor = kb.nextLine();
-		System.out.println("What is the interior of the car? ");
-		String theinterior = kb.nextLine();
-		System.out.println("What is the engine of the car? ");
-		String theengine = kb.nextLine();
-		System.out.println("What kind of wheels does the car have? ");
-		String thewheels = kb.nextLine();
+		System.out.println("What color is your hair? ");
+		String thehair = kb.nextLine();
+		System.out.println("What color are your eyes? ");
+		String theeyes = kb.nextLine();
+		System.out.println("What color is your skin? ");
+		String theskin = kb.nextLine();
 		
-		CarClass object1 = new CarClass(thecolor, theinterior, theengine, thewheels);
+		Human object1 = new Human(thehair, theeyes, theskin);
 		
-		System.out.println("Your vehicle is ready \n Paint: " + object1.getcol() + "\n Interior: " + object1.getinter() + "\n Engine: " + object1.geteng() + "\n Tires: " + object1.getwhee());
+		System.out.println("My info: \n Hair color: " + object1.gethair() + "\n Eye color: " + object1.geteyes() + "\n Skin color: " + object1.getskin());
 		
 	}
 }

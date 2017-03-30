@@ -1,12 +1,16 @@
-public class thecar extends toy {
-	public thecar() {
+public class thecar extends toy 
+{
+	public thecar() 
+	{
 		super();
 	}
 	
-	public thecar(String n) {
+	public thecar(String n) 
+	{
 		super(n);
 	}
-	public String getType() {
+	public String getType() 
+	{
 		return "Car";
 	}
 }

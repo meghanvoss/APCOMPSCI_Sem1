@@ -1,4 +1,3 @@
-package Part_1.Complete;
 import java.util.Scanner;
 
 /**
@@ -6,7 +5,7 @@ import java.util.Scanner;
  * @author Laurie White
  * @version April 2012
  */
-public class MagpieRunner
+public class MagpieRunner_P3
 {
 
 	/**
@@ -14,7 +13,7 @@ public class MagpieRunner
 	 */
 	public static void main(String[] args)
 	{
-		Magpie maggie = new Magpie();
+		Magpie_P3 maggie = new Magpie_P3();
 		
 		System.out.println (maggie.getGreeting());
 		Scanner in = new Scanner (System.in);
@@ -26,5 +25,4 @@ public class MagpieRunner
 			statement = in.nextLine();
 		}
 	}
-
 }

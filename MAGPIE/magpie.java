@@ -31,11 +31,19 @@ public class magpie
 		{
 			response = "Tell me more about your family.";
 		}
+		else if (findKeyword (statement, "dog") >= 0
+				|| findKeyword(statement, "cat") >= 0
+				|| findKeyword(statement, "fish") >= 0
+				|| findKeyword(statement, "pet") >= 0)
+		{
+			response = "Tell me more about your pets.";
+		}
 
-		/* place code for pet keywords here */
-
-		/* place code for keyword "Robinette" here */
-
+		else if (findKeyword (statement, "Robinette") >= 0)
+		{
+			response = "Tell me more about your teacher.";
+		}
+	
 
 		else if (statement.trim().length() == 0)
 		{

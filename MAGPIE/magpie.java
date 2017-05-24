@@ -1,5 +1,5 @@
-package Part_1.Complete;
-public class Magpie
+
+public class magpie
 {
 	public String getGreeting()
 	{

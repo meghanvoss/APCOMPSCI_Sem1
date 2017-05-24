@@ -1,4 +1,4 @@
-package Part_1.Complete;
+
 import java.util.Scanner;
 
 /**
@@ -6,7 +6,7 @@ import java.util.Scanner;
  * @author Laurie White
  * @version April 2012
  */
-public class MagpieRunner
+public class magpierunner
 {
 
 	/**
@@ -14,7 +14,7 @@ public class MagpieRunner
 	 */
 	public static void main(String[] args)
 	{
-		Magpie maggie = new Magpie();
+		magpie maggie = new magpie();
 		
 		System.out.println (maggie.getGreeting());
 		Scanner in = new Scanner (System.in);

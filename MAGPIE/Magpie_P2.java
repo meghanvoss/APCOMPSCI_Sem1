@@ -1,4 +1,4 @@
-package Part_2.Complete;
+
 /**
  * The completed version of the Magpie activity 4.
  *A program to carry on conversations with a human user.

@@ -1,17 +1,6 @@
-
 import java.util.Scanner;
-
-/**
- * A simple class to run the Magpie class.
- * @author Laurie White
- * @version April 2012
- */
 public class MagpieRunner_P2
 {
-
-	/**
-	 * Create a Magpie, give it user input, and print its replies.
-	 */
 	public static void main(String[] args)
 	{
 		Magpie_P2 maggie = new Magpie_P2();
@@ -26,5 +15,4 @@ public class MagpieRunner_P2
 			statement = in.nextLine();
 		}
 	}
-
 }

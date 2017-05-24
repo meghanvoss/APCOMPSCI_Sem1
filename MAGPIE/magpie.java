@@ -1,4 +1,3 @@
-
 public class magpie
 {
 	public String getGreeting()
@@ -6,13 +5,6 @@ public class magpie
 		return "Hello, let's talk.";
 	}
 
-	/**
-	 * Gives a response to a user statement
-	 * 
-	 * @param statement
-	 *            the user statement
-	 * @return a response based on the rules given
-	 */
 	public String getResponse(String statement)
 	{
 		String response = "";
@@ -89,30 +81,11 @@ public class magpie
 		return -1;
 	}
 
-	/**
-	 * Search for one word in phrase. The search is not case
-	 * sensitive. This method will check that the given goal
-	 * is not a substring of a longer string (so, for
-	 * example, "I know" does not contain "no"). The search
-	 * begins at the beginning of the string.
-	 * 
-	 * @param statement
-	 *            the string to search
-	 * @param goal
-	 *            the string to search for
-	 * @return the index of the first occurrence of goal in
-	 *         statement or -1 if it's not found
-	 */
 	private int findKeyword(String statement, String goal)
 	{
 		return findKeyword(statement, goal, 0);
 	}
 
-	/**
-	 * Pick a default response to use if nothing else fits.
-	 * 
-	 * @return a non-committal string
-	 */
 	private String getRandomResponse()
 	{
 		final int NUMBER_OF_RESPONSES = 4;
@@ -139,5 +112,4 @@ public class magpie
 
 		return response;
 	}
-
 }

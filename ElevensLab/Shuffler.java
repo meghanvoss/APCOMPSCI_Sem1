@@ -87,11 +87,12 @@ public class Shuffler {
 	 */
 	public static void selectionShuffle(int[] values) {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 3 *** */
+		int variable;
 		for(int k = values.length - 1; k >0; k--) {
 			int r = (int)Math.random()*(k+1);
-			int variable = values[r];
-			values[r] = values[k];
-			values[k] = variable;
+			variable = values[k];
+			values[k] = values[r];
+			values[r] = variable;
 		}
 	}
 }

@@ -1,4 +1,3 @@
-
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -631,7 +630,8 @@ public class PictureExplorer implements MouseMotionListener, ActionListener, Mou
    * @param e the mouse event
    */
   public void mouseMoved(MouseEvent e)
-  {}
+  {
+  }
   
   /**
    * Method called when the mouse is clicked
@@ -758,13 +758,13 @@ public class PictureExplorer implements MouseMotionListener, ActionListener, Mou
    * Class for establishing the focus for the textfields
    */
   private class PictureExplorerFocusTraversalPolicy
-    extends FocusTraversalPolicy {
-    
+    extends FocusTraversalPolicy
+	{
     /**
      * Method to get the next component for focus
      */
-    public Component getComponentAfter(Container focusCycleRoot,
-                                       Component aComponent) {
+    public Component getComponentAfter(Container focusCycleRoot, Component aComponent)
+	{
       if (aComponent.equals(colValue))
         return rowValue;
       else 
@@ -774,23 +774,26 @@ public class PictureExplorer implements MouseMotionListener, ActionListener, Mou
     /**
      * Method to get the previous component for focus
      */
-    public Component getComponentBefore(Container focusCycleRoot,
-                                        Component aComponent) {
+    public Component getComponentBefore(Container focusCycleRoot, Component aComponent)
+	{
       if (aComponent.equals(colValue))
         return rowValue;
       else 
         return colValue;
     }
     
-    public Component getDefaultComponent(Container focusCycleRoot) {
+    public Component getDefaultComponent(Container focusCycleRoot)
+	{
       return colValue;
     }
     
-    public Component getLastComponent(Container focusCycleRoot) {
+    public Component getLastComponent(Container focusCycleRoot)
+	{
       return rowValue;
     }
     
-    public Component getFirstComponent(Container focusCycleRoot) {
+    public Component getFirstComponent(Container focusCycleRoot)
+	{
       return colValue;
     }
   }
@@ -803,5 +806,4 @@ public class PictureExplorer implements MouseMotionListener, ActionListener, Mou
     Picture pix = new Picture("beach.jpg");
     pix.explore();
   }
-  
 }

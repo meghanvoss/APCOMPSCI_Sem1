@@ -100,7 +100,8 @@ public class Pixel
    * you can have.
    * @return the amount of red from 0 for none to 255 for max
    */
-  public int getRed() { 
+  public int getRed()
+  { 
     
     /* get the value at the location from the picture as a 32 bit int
      * with alpha, red, green, blue each taking 8 bits from left to right
@@ -132,7 +133,8 @@ public class Pixel
    * you can have.
    * @return the amount of green from 0 for none to 255 for max
    */
-  public int getGreen() { 
+  public int getGreen()
+  { 
     
     /* get the value at the location from the picture as a 32 bit int
      * with alpha, red, green, blue each taking 8 bits from left to right
@@ -162,7 +164,8 @@ public class Pixel
    * you can have.
    * @return the amount of blue from 0 for none to 255 for max
    */
-  public int getBlue() { 
+  public int getBlue()
+  { 
     
     /* get the value at the location from the picture as a 32 bit int
      * with alpha, red, green, blue each taking 8 bits from left to right

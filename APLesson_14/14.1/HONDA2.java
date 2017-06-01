@@ -5,9 +5,9 @@ public class HONDA2 extends CAR
 	private double[] LOCAATION2;
 	private double x, y;
 	
-	public HONDA2(double[] ihatecs)
+	public HONDA2(double[] idontlikethis)
 	{
-		LOCATION2 = ihatecs;
+		LOCATION2 = idontlikethis;
 	}
 	
 	public int getID()

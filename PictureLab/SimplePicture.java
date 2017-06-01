@@ -222,7 +222,10 @@ public class SimplePicture implements DigitalPicture
   * Method to get the file name associated with the picture
   * @return  the file name associated with the picture
   */
- public String getFileName() { return fileName; }
+ public String getFileName()
+ {
+	 return fileName;
+ }
  
  /**
   * Method to set the file name
@@ -238,7 +241,9 @@ public class SimplePicture implements DigitalPicture
   * @return the title of the picture
   */
  public String getTitle() 
- { return title; }
+ {
+	 return title;
+ }
  
  /**
   * Method to set the title for the picture
@@ -255,20 +260,29 @@ public class SimplePicture implements DigitalPicture
   * Method to get the width of the picture in pixels
   * @return the width of the picture in pixels
   */
- public int getWidth() { return bufferedImage.getWidth(); }
+ public int getWidth()
+ {
+	 return bufferedImage.getWidth();
+ }
  
  /**
   * Method to get the height of the picture in pixels
   * @return  the height of the picture in pixels
   */
- public int getHeight() { return bufferedImage.getHeight(); }
+ public int getHeight()
+ {
+	 return bufferedImage.getHeight();
+ }
  
  /**
   * Method to get the picture frame for the picture
   * @return the picture frame associated with this picture
   * (it may be null)
   */
- public PictureFrame getPictureFrame() { return pictureFrame; }
+ public PictureFrame getPictureFrame()
+ {
+	 return pictureFrame;
+ }
  
  /**
   * Method to set the picture frame for this picture
@@ -465,8 +479,7 @@ public class SimplePicture implements DigitalPicture
      file = new File(FileChooser.getMediaPath(this.fileName));
      if (!file.canRead())
      {
-       throw new IOException(this.fileName +
-                             " could not be opened. Check that you specified the path");
+       throw new IOException(this " could not be opened. Check that you specified the path");
      }
    }
    
@@ -488,8 +501,7 @@ public class SimplePicture implements DigitalPicture
 
      } catch (Exception ex) {
          System.out.println("There was an error trying to open " + fileName);
-         bufferedImage = new BufferedImage(600,200,
-                                           BufferedImage.TYPE_INT_RGB);
+         bufferedImage = new BufferedImage(600,200, BufferedImage.TYPE_INT_RGB);
          addMessage("Couldn't load " + fileName,5,100);
          return false;
      }
@@ -554,8 +566,7 @@ public class SimplePicture implements DigitalPicture
     scaleTransform.scale(cFactor,rFactor);
     
     // create a new picture object that is the right size
-    Picture result = new Picture((int) (getHeight() * rFactor),
-                                 (int) (getWidth() * cFactor));
+    Picture result = new Picture((int) (getHeight() * rFactor), (int) (getWidth() * cFactor));
     
     // get the graphics 2d object to draw on the result
     Graphics graphics = result.getGraphics();

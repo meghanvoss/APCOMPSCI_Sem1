@@ -16,6 +16,27 @@ public class PictureTester
     beach.zeroBlue();
     beach.explore();
   }
+    public static void testGrayscale()
+  {
+    Picture beach = new Picture("beach.jpg");
+    beach.explore();
+    beach.grayscale();
+    beach.explore();
+  }
+    public static void testKeepOnlyBlue()
+  {
+    Picture beach = new Picture("beach.jpg");
+    beach.explore();
+    beach.keepOnlyBlue();
+    beach.explore();
+  }
+    public static void testNegate()
+  {
+    Picture beach = new Picture("beach.jpg");
+    beach.explore();
+    beach.negate();
+    beach.explore();
+  }
   
   /** Method to test mirrorVertical */
   public static void testMirrorVertical()
@@ -23,6 +44,27 @@ public class PictureTester
     Picture caterpillar = new Picture("caterpillar.jpg");
     caterpillar.explore();
     caterpillar.mirrorVertical();
+    caterpillar.explore();
+  }
+  public static void testMirrorVerticalRightToLeft()
+  {
+    Picture caterpillar = new Picture("caterpillar.jpg");
+    caterpillar.explore();
+    caterpillar.mirrorVerticalRightToLeft();
+    caterpillar.explore();
+  }
+  public static void testMirrorHorizontal()
+  {
+    Picture caterpillar = new Picture("caterpillar.jpg");
+    caterpillar.explore();
+    caterpillar.mirrorHorizontal();
+    caterpillar.explore();
+  }
+  public static void testMirrorHorizontalBotToTop()
+  {
+    Picture caterpillar = new Picture("caterpillar.jpg");
+    caterpillar.explore();
+    caterpillar.mirrorHorizontalBotToTop();
     caterpillar.explore();
   }
   
@@ -34,6 +76,26 @@ public class PictureTester
     temple.mirrorTemple();
     temple.explore();
   }
+  public static void testMirrorArms()
+  {
+    Picture snowman = new Picture("snowman.jpg");
+    snowman.explore();
+    snowman.mirrorArms();
+    snowman.explore();
+  }
+  public static void testMirrorGull()
+  {
+    Picture seagull = new Picture("seagull.jpg");
+    seagull.explore();
+    seagull.mirrorGull();
+    seagull.explore();
+  }
+  public static void testCopy() {
+	  Picture koala = new Picture("koala.jpg");
+	  Picture swan = new Picture("swan.jpg");
+	  koala.copy(swan, 250, 1, 65, 71, 284, 394 );
+	  koala.explore();
+  }
   
   /** Method to test the collage method */
   public static void testCollage()
@@ -41,6 +103,11 @@ public class PictureTester
     Picture canvas = new Picture("640x480.jpg");
     canvas.createCollage();
     canvas.explore();
+  }
+  public static void testMyCollage() {
+	  Picture canvas = new Picture("640x480.jpg");
+	  canvas.myCollage();
+	  canvas.explore();
   }
   
   /** Method to test edgeDetection */
@@ -58,7 +125,7 @@ public class PictureTester
     // uncomment a call here to run a test
     // and comment out the ones you don't want
     // to run
-    testZeroBlue();
+    //testZeroBlue();
     //testKeepOnlyBlue();
     //testKeepOnlyRed();
     //testKeepOnlyGreen();
